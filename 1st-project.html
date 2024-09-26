@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Door & Security Camera</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Automatic Door & Security Camera</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="automatic_door.html">Automatic Door & Security Camera</a></li>
+                <li><a href="street_light.html">Automatic Street Light</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>This project allows you to remotely control a door using ESP32-CAM and monitor the area via a security camera. It integrates a servo motor, FTDI adapter for programming, and an IR sensor to detect motion.</p>
+
+            <h3>Components Needed</h3>
+            <ul>
+                <li>ESP32-CAM</li>
+                <li>FTDI Adapter</li>
+                <li>Servo Motor</li>
+                <li>IR Sensor</li>
+                <li>L298N Motor Driver</li>
+                <li>Buttons for Manual Control</li>
+            </ul>
+
+            <h3>Connection Diagram</h3>
+            <img src="connection_diagram.jpg" alt="Connection Diagram">
+
+            <h3>Arduino IDE Setup</h3>
+            <p>Follow these steps to set up and upload code to your ESP32-CAM using the FTDI adapter:</p>
+            <ol>
+                <li>Install ESP32 board library in Arduino IDE.</li>
+                <li>Select the correct board (ESP32-CAM) and the right COM port.</li>
+                <li>Connect the FTDI adapter to ESP32-CAM, wiring RX to TX and TX to RX.</li>
+                <li>Upload the code (sample code shown below).</li>
+                <li>Remove the jumper wires after uploading and restart ESP32-CAM to run the code.</li>
+            </ol>
+            <img src="arduino_setup1.jpg" alt="Arduino IDE Setup">
+            <img src="arduino_setup2.jpg" alt="Arduino IDE Setup">
+            <img src="arduino_setup3.jpg" alt="Arduino IDE Setup">
+            <img src="arduino_setup4.jpg" alt="Arduino IDE Setup">
+            <img src="arduino_setup5.jpg" alt="Arduino IDE Setup">
+
+            <h3>Code for Automatic Door</h3>
+            <pre>
+                // Sample code for controlling the door using ESP32-CAM
+                #include <ESP32Servo.h>
+                // Add servo and IR sensor code here...
+            </pre>
+
+            <h3>Programming ESP32-CAM with FTDI</h3>
+            <p>Ensure correct wiring: Connect RX of FTDI to TX of ESP32-CAM and TX of FTDI to RX of ESP32-CAM. Power the ESP32 with 5V and GND pins. Place the jumper wire for flashing and remove it after the code is uploaded.</p>
+
+            <h3>Where to Use This Project</h3>
+            <p>This project can be applied in home automation, office security, and anywhere remote monitoring and door control are required.</p>
+
+            <h3>Advantages</h3>
+            <ul>
+                <li>Remote door access and monitoring.</li>
+                <li>Enhanced security with automatic IR sensor detection.</li>
+            </ul>
+
+            <h3>Disadvantages</h3>
+            <ul>
+                <li>Dependent on Wi-Fi for remote access.</li>
+                <li>Initial setup complexity.</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+        <p>Copyright &copy; 2024 <a href="https://mrariyanhaque.github.io" target="_blank">Ariyan Haque</a></p>
+    </footer>
+</body>
+</html>
